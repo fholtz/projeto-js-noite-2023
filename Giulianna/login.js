@@ -2,9 +2,11 @@ const login = document.querySelector('#login');
 const senha = document.querySelector('#senha');
 const button = document.querySelector('#pesquisar');
 
+
 button.addEventListener('click', function (e) {
     let loginNome = login.value;
     let senhaOk = senha.value;
+    // let SejaBemVindo =  
     const options = {
         method: 'GET',
         mode: 'cors',
@@ -14,14 +16,18 @@ button.addEventListener('click', function (e) {
         .then(function (response) {
             response.json()
                 .then(function (array) {
-                    console.log(array);
+                    let flagParada = false
                     for (let index = 0; index < array.length; index++) {
-                        if (array[index].login == loginNome) {
-                            if (array[index].senha == senhaOk) {
-                                alert('seja bem vindo');
+                          if (array[index].login == loginNome && array[index].senha == senhaOk) {
+                            SejaBemVindo =
+                                flagParada = true;
+                            if (flagParada == true) {
+                                alert("Seja bem vindo");
                             }
+                            break;
+                        } else {
+                            flagParada = false;
                         }
-                        else { alert('login / senha incorretos'); }
 
                     }
                 })
