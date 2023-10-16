@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 const retorno = document.getElementById("retorno")
 
+=======
+>>>>>>> b15ec0e7fd1148ecb857ce884c8a0f06d906bcf0
 const login = document.querySelector('#login')
 
 const senha = document.querySelector('#senha')
@@ -31,8 +34,12 @@ botao.addEventListener('click', function (e) {
                         if (nome == data[index].login && password == data[index].senha) {
                             console.log(data[index].nome)
                             window.open(`pagina1.html?login=${data[index].nome}`);
+<<<<<<< HEAD
                             retorno.innerHTML 
 
+=======
+                            
+>>>>>>> b15ec0e7fd1148ecb857ce884c8a0f06d906bcf0
                             break
                         }
 
