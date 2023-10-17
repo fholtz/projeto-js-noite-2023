@@ -1,5 +1,6 @@
 const botao = document.querySelector('#buscar');
-let search = buscar
+const buscar = document.querySelector('#buscarNome');
+
 const showData = function (result) {
     for (const campo in result) {
         if (document.querySelector('#' + campo)) {
@@ -10,6 +11,8 @@ const showData = function (result) {
 }
 
 botao.addEventListener('click', function (e) {
+
+    let search = buscar.value;
 
     const options = {
         method: 'GET',
@@ -24,7 +27,24 @@ botao.addEventListener('click', function (e) {
 
                 .then(function (dados) {
                     console.log(dados);
-                    showData(dados);
                 })
         })
 })
+
+
+const carregarLista = (json) => {
+    const lista = document.querySelector("div.lista");
+    lista.innerHTML = "";
+
+    json.Search.forEach(element => {
+        console.log(element);
+
+        let item = document.createElement("div");
+        item.classList.add("item");
+
+        item.innerHTML = `<img src="${element.Poster}" /><h2>${element.Title}</h2`
+
+        lista.appendChild(item)
+
+    });
+}
