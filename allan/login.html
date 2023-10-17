@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<link rel="stylesheet" href="style.css">
 
-<title>Login</title>
+<title>Tela de login</title>
 </head>
 
 <body>
    <h1>Login</h1>
-   <form id="Form">
-      <label for="login">Login:</label>
-      <input type="text" id="login" name="login" required><br>
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required><br>
+   <form id="formLogin">
+      <div class="form-floating mb-3">
+         <input type="email" id="login" placeholder="login">
+         <label for="login"></label>
+      </div>
+      <div class="form-floating">
+         <input type="password" id="senha" placeholder="senha">
+         <label for="senha"></label>
+      </div><br>
       <button type="button" id="botaoLogin">Login</button>
    </form>
    <p id="mensagemBemVindo"></p>

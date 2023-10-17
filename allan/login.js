@@ -5,9 +5,10 @@ document.getElementById('botaoLogin').addEventListener('click', function () {
     fetch('ws/loginJson.json')
         .then(response => response.json())
         .then(data => {
-            const user = data.find(user => user.login === login && user.login === login);
+            const user = data.find(user => user.login === login && user.senha === senha);
             if (user) {
-                document.getElementById('mensagemBemVindo').innerText = `Seja bem-vindo, ${user.nome}!`;
+                window.open("streaming.html?nome="+user.nome); 
+                document.getElementById('mensagemBemVindo').innerText = `Seja bem-vindo, ${user.nome}!!!`;
             } else {
                 document.getElementById('mensagemBemVindo').innerText = 'Login ou senha incorretos.';
             }
