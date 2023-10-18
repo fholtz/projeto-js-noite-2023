@@ -6,30 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streaming de Filmes</title>
 
-    <style>
-        body {
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        body div {
-            text-align: center;
-            display: flex;
-            width: 10%;
-            height: 30px;
-            padding: 6px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 
 <body>
-    <p id="filmes"></p>
-    <label for="buscarFilmes">Buscar Filme:</label>
-    <input type="text" id="buscarFilmes" required>
-    <button type="button" id="searchButton">Buscar</button>
+    <h1>FILMES</h1>
+    <p id="filme"></p>
+    <form>
+        <label for="buscarFilmes">:</label>
+        <input type="text" id="buscarFilmes" placeholder="Digite o nome do filme" required>
+        <button type="button" id="botaoBuscar">Buscar</button>
+    </form>
     <div id="listaFilmes"></div>
-    <div id="detalhesFilmes"></div>
+    <div id="detalheFilmes"></div>
 
     <script src="api-filmes.js"></script>
 </body>
