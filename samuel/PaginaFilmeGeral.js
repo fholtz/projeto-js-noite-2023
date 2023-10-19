@@ -23,9 +23,20 @@ botao2.addEventListener('click', function (e) {
         .then(function (response) {
             response.json()
 
-                .then(function (array) {
-                    console.log(array)
+                .then(function (obj) {
+                    let teste
+                    for (let i=0; i < obj.Search.length; i++) {
+                        document.querySelector('#posterFilme').innerHTML += `<a href="PaginaFilmeUnificado.html?nomefilme=${obj.Search[i].Title}"><img src="${obj.Search[i].Poster}"></a>`
+
+                    }
+
+    
                 })
             })
 
+        .catch(function (e) {
+            console.log('Error: ' + e.message);
         })
+    })
+
+     
