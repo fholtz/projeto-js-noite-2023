@@ -27,6 +27,7 @@ botao.addEventListener('click', function (e) {
 
                 .then(function (dados) {
                     console.log(dados);
+                    carregarLista(dados);
                 })
         })
 })
@@ -42,9 +43,13 @@ const carregarLista = (json) => {
         let item = document.createElement("div");
         item.classList.add("item");
 
-        item.innerHTML = `<img src="${element.Poster}" /><h2>${element.Title}</h2`
+        item.innerHTML = `<a href="pagfilme.html?filme=${element.Title}"><img src="${element.Poster}"/><h2>${element.Title}</h2></a>`
 
-        lista.appendChild(item)
+        lista.appendChild(item);
 
     });
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const usuario = urlParams.get("nomeUsuario")
