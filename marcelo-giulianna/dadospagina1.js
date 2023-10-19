@@ -7,11 +7,9 @@ document.querySelector("#retorno").innerHTML = 'Seja bem vindo ' + usuario
 
 var filmes = document.querySelector('#filmes')
 
-
 filmes.addEventListener('blur', function (e) {
 
     let buscageral = filmes.value
-
 
     const options = {
         method: 'GET',
@@ -29,9 +27,7 @@ filmes.addEventListener('blur', function (e) {
 
                     for (let index = 0; index < data.Search.length; index++) {
                         console.log(data.Search)
-                        document.querySelector('#listafilmes').innerHTML+=`<img src='${data.Search[index].Poster}'><a href='#'></a></img>`
-                        
-
+                        document.querySelector('#listafilmes').innerHTML += `<a href='pagina2.html?titulo=${data.Search[index].Title}&id=${data.Search[index].imdbID}'><img src='${data.Search[index].Poster}'></img></a>`
 
                     }
 
@@ -40,14 +36,9 @@ filmes.addEventListener('blur', function (e) {
 
         })
 
-
         .catch(function (e) {
             console.log('Error: ' + e.message);
         })
-
-
-
-
 })
 
 
