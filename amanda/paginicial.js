@@ -1,3 +1,8 @@
+const urlParams = new URLSearchParams(window.location.search);
+const usuario = urlParams.get("nome")
+
+document.querySelector('#nomeUsuario').innerHTML = usuario
+
 const botao = document.querySelector('#buscar');
 const buscar = document.querySelector('#buscarNome');
 
@@ -49,7 +54,3 @@ const carregarLista = (json) => {
 
     });
 }
-
-const urlParams = new URLSearchParams(window.location.search);
-
-const usuario = urlParams.get("nomeUsuario")
