@@ -1,16 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const nomeUsuario = urlParams.get("nome")
 document.querySelector('#name').innerHTML = nomeUsuario;
-
 const filme = document.querySelector('#filme')
 const button = document.querySelector('#pesquisar');
-
 
 button.addEventListener('click', function (e) { 
     const options = {
     method: 'GET',
     mode: 'cors',
-    cache: 'default'
+    cache: 'default'    
     }
     let nomedofilme = filme.value;
 
@@ -21,7 +19,7 @@ button.addEventListener('click', function (e) {
 
             .then(function (objeto) {
                 for(let i = 0; i < objeto.Search.length; i++) {
-                    document.querySelector('#poster').innerHTML += `<img src="${objeto.Search[i].Poster}"   >`;
+                    document.querySelector('#poster').innerHTML += `<a href="filme.html?titulo=${objeto.Search[i].Title}"><img src="${objeto.Search[i].Poster}"></a>`;
                 }
             })
     })
