@@ -50,25 +50,38 @@ function info_film(conteudo) {
     if (!("Error" in conteudo)) {
         //Atualiza os campos com os valores.
         document.getElementById('Posterfilm').innerHTML = `<img src=${conteudo.Poster}>`;
-        document.getElementById('titulofilm').innerHTML= conteudo.Title
-        document.getElementById('notafilm').innerHTML= conteudo.imdbRating
-        document.getElementById('sinopsefilm').innerHTML= conteudo.Plot
+        document.getElementById('titulofilm').innerHTML = conteudo.Title
+        document.getElementById('notafilm').innerHTML = conteudo.imdbRating
+        document.getElementById('sinopsefilm').innerHTML = conteudo.Plot
         document.getElementById('generofilm').innerHTML = conteudo.Genre
+       let result = "";
+
+        switch (conteudo.Rated) {
+            case "G":
+                result = "Classificação livre"
+                break;
+            case "PG":
+                result = "Orientação dos Responsáveis"
+                break;
+            case "PG-13":
+                result = "Classificação 14 anos"
+                break;
+            case "R":
+                result = "Classificação 16 ano"
+                break;
+            case "NC-17":
+                result = "Classificação 18 anos"
+                break;
+            default:
+                result = "Filme Desclassificado"
+                break;
+        }
+
         document.getElementById('classificacaofilm').innerHTML = result
-
-
-        // switch (conteudo.Rated) {
-        //     case value "G":
-        //         result = livre
-        //         break 
-        
-        //     default:
-        //         break;
-        // }
     } //end if.
     else {
-        //CEP não Encontrado.
-        limpa_formulário_cep();
+    console.log("Filme não encontrado");
+        // limpa_formulário_cep();
         alert("Filme não encontrado .");
     }
 }
