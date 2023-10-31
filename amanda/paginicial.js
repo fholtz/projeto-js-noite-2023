@@ -31,7 +31,7 @@ botao.addEventListener('click', function (e) {
             response.json()
 
                 .then(function (dados) {
-                    console.log(dados);
+                    // console.log(dados);
                     carregarLista(dados);
                 })
         })
@@ -43,7 +43,7 @@ const carregarLista = (json) => {
     lista.innerHTML = "";
 
     json.Search.forEach(element => {
-        console.log(element);
+        // console.log(element);
 
         let item = document.createElement("div");
         item.classList.add("item");

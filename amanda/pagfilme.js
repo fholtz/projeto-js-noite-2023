@@ -1,8 +1,37 @@
 const urlParams = new URLSearchParams(window.location.search);
 const filme = urlParams.get("filme")
 
+function classificacao(result) {
+    let clas = result.Rated
+
+    switch (clas) {
+        case 'G':
+            result = 'Classificação livre';
+            break;
+        case 'PG':
+            result = 'Orientação dos Responsáveis';
+            break;
+        case 'PG-13':
+            result = 'Classificação 14 anos';
+            break;
+        case 'R':
+            result = 'Classificação 16 anos';
+            break;
+        case 'NC-17':
+            result = 'Classificação 18 anos';
+            break;
+        default:
+            result = 'Sem classificação';
+
+    }
+
+    return result;
+}
+
 
 const showData = function (result) {
+
+    let resultado = classificacao(result);
     console.log(result)
 
     document.querySelector('#titulo').innerHTML = result.Title;
@@ -15,7 +44,7 @@ const showData = function (result) {
 
     document.querySelector('#genero').innerHTML = result.Genre;
 
-    document.querySelector('#classificacao').innerHTML = result.Rated;
+    document.querySelector('#classificacao').innerHTML = resultado;
 }
 
 const options = {
@@ -36,7 +65,7 @@ fetch(`http://www.omdbapi.com/?t=${filme}&apikey=249e3bec`, options)
     })
 
 
-    
+
 // const carregarLista = (json) => {
 //     const lista = document.querySelector("div.lista");
 //     lista.innerHTML = "";
