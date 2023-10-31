@@ -1,0 +1,16 @@
+body {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1.titulo {
+    text-align: center;
+    background-color: aquamarine;
+    color: black;
+}
+
+.search {
+    width: 300px;
+}
