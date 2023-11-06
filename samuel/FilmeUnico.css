@@ -1,0 +1,25 @@
+.container {
+    background-color: #8A2BE2;
+    border: 1px solid red;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+    'Posterfilm Posterfilm Posterfilm Posterfilm'
+    'titulofilm titulofilm titulofilm titulofilm'
+    'FilmesGeral FilmesGeral FilmesGeral FilmesGeral'
+}
+
+.container div {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid blue;
+    }
+
+#titulofilm{
+    grid-area: titulofilm;
+}
+
+#Posterfilm{
+    grid-area: Posterfilm;
+}
