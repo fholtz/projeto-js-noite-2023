@@ -29,7 +29,7 @@ button.addEventListener('click', function (e) {
                     }
 
                     if (flagParada == true) {
-                        window.open(`deuCerto.html?nome=${nome}`, '_self'); 
+                        window.open(`deuCerto.html?nome=${nome}`, '_self');
                     } else {
                         alert("login / senha incorretos");
                     }
