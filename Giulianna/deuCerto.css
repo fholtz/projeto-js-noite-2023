@@ -1,0 +1,19 @@
+@media only screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        background-color: black;
+        gap: 10px;
+        grid-template-areas:
+        'poster poster poster poster'
+        'Title Title Title Title'
+        'imdbRating imdbRating imdbRating imdbRating'
+        'Plot Plot Plot Plot'
+        'Genre Genre Genre Genre'
+        'Rated Rated Rated Rated'
+
+    }
+.poster {
+grid-area: poster;
+
+
+}

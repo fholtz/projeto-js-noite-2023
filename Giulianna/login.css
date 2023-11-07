@@ -1,0 +1,34 @@
+@media only screen and (min-width: 768px) {
+    .fundo {
+        display: grid;
+        background-color: blue;
+        gap: 10px;
+        grid-template-areas:
+            'h1 h1 h1 h1'
+            'ls ls ls ls'
+            'login login login login'
+
+    }
+
+    #acessar {
+        background-color: blue;
+        grid-area: ls;
+        justify-items: center;
+        display:flow-root ;
+    }
+
+    #h1 {
+        grid-area: h1;
+        justify-items: center;
+        text-align: center;
+
+        font-family: cursive;
+    }
+
+    #login {
+        grid-area: login;
+        justify-items: center;
+        text-align: center;
+
+        font-family: cursive;
+    }
