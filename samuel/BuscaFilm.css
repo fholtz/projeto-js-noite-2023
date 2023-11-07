@@ -1,120 +1,115 @@
-/* .container {
-    background-color: #8A2BE2;
-    border: 1px solid red;
-    padding: 15px;
-    display: grid;
-    gap: 5px;
-    grid-template-areas:
-    'titulo2 titulo2 titulo2 titulo2'
-    'FilmesGeral FilmesGeral FilmesGeral FilmesGeral'
-}
-
-.container div {
-    background-color: #ccc;
-    padding: 20px;
-    border: 1px solid blue;
-    }
-
-
-#titulo2 {
-    grid-area: titulo2;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#FilmesGeral {
-    grid-area: FilmesGeral;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#posterFilme {
-    border: solid red;
-    text-align: center;
-    padding: 2px;
-    
-}
-
-div .especial :hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    
-} */
 
 /* BuscaFilm.css */
 
+.especial {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  text-align: center;
+  margin: 2px;
+
+}
+
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #8A2BE2; /* Cor de fundo roxa */
-    color: #fff; /* Fontes claras */
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  #titulo2 {
-    font-size: 24px;
-    color: #fff; /* Fonte clara */
-  }
-  
-  #FilmesGeral {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espaço entre os banners dos filmes */
-    justify-content: flex-start; /* Alinha até 4 banners por linha */
-  }
-  
-  span {
-    display: block;
-    font-size: 18px;
-    color: #fff; /* Fonte clara */
-  }
-  
-  #Filnome {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco para o campo de entrada */
-    color: #333; /* Fonte escura */
-  }
-  
-  #buscafilm {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent; /* Botão com fundo transparente */
-    color: #fff; /* Fonte clara */
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .poster-filme {
-    background-image: url("URL_DA_IMAGEM"); /* Substitua "URL_DA_IMAGEM" pela URL da imagem do filme */
-    background-size: cover;
-    background-position: center;
-    width: 25%; /* 4 banners por linha (100% / 4) */
-    padding-top: 37.5%; /* Proporção da imagem do filme */
-    border-radius: 10px;
-    transition: transform 0.2s; /* Efeito de transição no hover */
-    cursor: pointer;
-  }
-  
-  div .especial :hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #8A2BE2;
+  /* Cor de fundo roxa */
+  color: #fff;
+  /* Fontes claras */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#titulo2 {
+  font-size: 24px;
+  color: #fff;
+  /* Fonte clara */
+}
+
+#klk {
+  font-size: 45px;
+}
+
+#FilmesGeral {
+  display: flex;
+  gap: 10px 5px;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Espaço entre os banners dos filmes */
+  justify-content: flex-start;
+  /* Alinha até 4 banners por linha */
+}
+
+span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  /* Fonte clara */
+}
+
+#Filnome {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fundo branco para o campo de entrada */
+  color: #333;
+  /* Fonte escura */
+}
+
+#buscafilm {
+  width: 100%;
+  padding: 10px;
+  border: solid pink;
+  border-radius: 10px;
+  background-color: transparent;
+  /* Botão com fundo transparente */
+  color: #fff;
+  /* Fonte clara */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.poster-filme {
+  /* background-image: url("URL_DA_IMAGEM"); */
+  /* Substitua "URL_DA_IMAGEM" pela URL da imagem do filme */
+  background-size: cover;
+  background-position: center;
+  width: 25%;
+  /* 4 banners por linha (100% / 4) */
+  padding-top: 37.5%;
+  /* Proporção da imagem do filme */
+  /* padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 30%;
+  border-radius: 10px; */
+  transition: transform 0.2s;
+  /* Efeito de transição no hover */
+  cursor: pointer;
+}
+
+div .especial :hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* a {
+    margin: 10px;
+  } */

@@ -1,5 +1,5 @@
-/* 
-.container {
+
+/* .container {
     background-color: #8A2BE2;
     border: 1px solid red;
     padding: 15px;
@@ -55,12 +55,14 @@ border: 1px solid blue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } */
 
-/* loginFilm.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #8A2BE2; /* Cor de fundo roxa */
-    color: #fff; /* Fontes claras */
+
+/*loginFilm.css*/
+
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #8A2BE2; 
+    color: #fff;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -133,6 +135,6 @@ body {
   }
   
   #logar {
-    background-color: #8A2BE2; /* Cor de fundo roxa para o botão */
-  }
-  
+    background-color: #8A2BE2; /* Cor de fundo roxa para o botão*/
+  } 
+    

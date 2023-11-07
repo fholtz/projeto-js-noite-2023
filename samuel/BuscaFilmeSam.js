@@ -36,11 +36,11 @@ botao.addEventListener('click', function (e) {
                         }
                     }
 
-                    if (flag) {
+                    if (flag) { 
                         console.log("Seja Bem Vindo "+ NomeDoUser);
                         window.open(`./PaginaDeBusca.html?nome=${NomeDoUser}`);
                     } else {
-                        alert("Login ou senha incorretos")
+                        alert("Login ou senha incorretos");
                     }
        
                 })
