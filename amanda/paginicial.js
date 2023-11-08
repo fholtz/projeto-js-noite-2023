@@ -1,3 +1,8 @@
+const urlParams = new URLSearchParams(window.location.search);
+const usuario = urlParams.get("nome")
+
+document.querySelector('#nomeUsuario').innerHTML = usuario
+
 const botao = document.querySelector('#buscar');
 const buscar = document.querySelector('#buscarNome');
 
@@ -26,7 +31,7 @@ botao.addEventListener('click', function (e) {
             response.json()
 
                 .then(function (dados) {
-                    console.log(dados);
+                    // console.log(dados);
                     carregarLista(dados);
                 })
         })
@@ -38,7 +43,7 @@ const carregarLista = (json) => {
     lista.innerHTML = "";
 
     json.Search.forEach(element => {
-        console.log(element);
+        // console.log(element);
 
         let item = document.createElement("div");
         item.classList.add("item");
@@ -49,7 +54,3 @@ const carregarLista = (json) => {
 
     });
 }
-
-const urlParams = new URLSearchParams(window.location.search);
-
-const usuario = urlParams.get("nomeUsuario")

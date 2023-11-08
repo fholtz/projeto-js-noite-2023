@@ -1,0 +1,48 @@
+.grid-foto {
+    grid-area: 1;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.grid-header {
+    grid-area: heater;
+    text-align: center;
+    color: rgb(237, 237, 237);
+    font-family: Impact;
+    font-size: 30px;
+}
+
+.grid-login {
+    grid-area: login;
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    columns: auto;
+    padding: auto;
+}
+
+.grid-rodape {
+    grid-area: footer;
+    text-align: center;
+    color: white;
+
+}
+
+.grid-container {
+    background-color: black;
+    display: grid;
+    gap: 0px;
+    column-gap: 10px;
+    grid-template-areas:
+        'foto foto foto foto'
+        'header header header header'
+        'login login login login'
+        'footer footer footer footer';
+}
+
+body{
+    background-color: black;
+}
