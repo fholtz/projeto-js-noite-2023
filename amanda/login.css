@@ -1,14 +1,16 @@
-.grid-foto {
-    grid-area: 1;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    text-align: center;
-    justify-content: center;
+.grid-container {
+    background-color: black;
+    display: grid;
+    column-gap: 2px;
+    grid-template-areas:
+        'header header header'
+        'login login login'
+        'rodape rodape rodape'
+        'foto foto foto';
 }
 
 .grid-header {
-    grid-area: heater;
+    grid-area: header;
     text-align: center;
     color: rgb(237, 237, 237);
     font-family: Impact;
@@ -20,7 +22,7 @@
     text-align: center;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    columns: auto;
+    columns: login;
     padding: auto;
 }
 
@@ -31,18 +33,16 @@
 
 }
 
-.grid-container {
-    background-color: black;
-    display: grid;
-    gap: 0px;
-    column-gap: 10px;
-    grid-template-areas:
-        'foto foto foto foto'
-        'header header header header'
-        'login login login login'
-        'footer footer footer footer';
+.grid-foto {
+    grid-area: foto;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    text-align: auto;
+    justify-content: center;
 }
 
-body{
+
+body {
     background-color: black;
 }

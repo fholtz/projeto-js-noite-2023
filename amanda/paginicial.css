@@ -1,0 +1,38 @@
+.grid-botao {
+    margin-top: 10px;
+    padding: 5px;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: block;
+}
+
+.grid-header {
+    grid-area: header;
+    text-align: center;
+    color: red;
+    font-family: Impact;
+}
+
+.grid-buscar {
+    grid-area: header;
+    text-align: left;
+    color: white;
+    font-family: Impact;
+}
+
+.grid-buscar {
+    grid-area: buscar;
+    text-align: center;
+    color: brown;
+    font-family: Impact;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: auto;
+    height: 150px;
+}
