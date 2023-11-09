@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('cor.png');
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#Title {
+  text-align: left;
+  font-family: cursive;
+  font-size: 18px;
+  height: 0, 1cm;
+  margin: 10px 0;
+}
+
+#imdbRating {
+  text-align: left;
+  font-family: cursive;
+  font-size: 18px;
+  height: 0, 1cm;
+  margin: 10px 0;
+}
+
+#Rated {
+  text-align: left;
+  font-family: cursive;
+  font-size: 18px;
+  height: 0, 1cm;
+  margin: 10px 0;
+}
+
+#Plot {
+  text-align: left;
+  font-family: cursive;
+  color: #fff;
+}
+
+#Genre {
+  text-align: left;
+  font-family: cursive;
+  font-size: 18px;
+  height: 0, 1cm;
+  margin: 10px 0;
+}

@@ -1,11 +1,37 @@
-@media only screen and (min-width: 768px) {
-    #fundo {
-        display: grid;
-        background-color: hotpink;
-        gap: 10px;
-        grid-template-areas:
-        
-    }
+body {
+    font-family: cursive;
+    background-image: url('cor.png');
+    margin: 0;
+    padding: 0;
+}
 
+#name,
+h4 {
+    font-family: cursive;
+    color: 040321;
+    margin: 10px 0;
+    text-align: center;
+    border: #fff;
+}
+
+#filme {
+
+    color: #fff;
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #040321;
+    background-color: #040321;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#pesquisar {
+    background-color: #040321;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    margin: 10px;
 
 }

@@ -1,59 +1,48 @@
-@media only screen and (min-width: 768px) {
-    #fundo {
-        display: grid;
-        background-color: hotpink;
-        gap: 10px;
-        grid-template-areas:
-            'h1 h1 h1 h1 h1'
-            'login login'
-            'senha senha'
-            'GF GF GF GF'
-            'botao botao botao botao'
-    }
+body {
+  font-family: cursive;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
 
-    h1 {
-        grid-area: h1;
-        text-align: center;
-        font-family: fantasy;
-        font-size: 3cm;
-        color: deeppink;
-        background-color: rgb(0, 0, 0)
-    }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 20px;
+}
 
-    #login {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: deeppink;
-        border-color: deeppink;
-        grid-area: login;
-        justify-items: center;
-        text-align: center;
-    }
+#fundo {
+  background-image: url('giuflix.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    #senha {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: deeppink;
-        border-color: deeppink;
-        grid-area: senha;
-        justify-items: center;
-        text-align: center;
-    }
+#acessar {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 400px;
+}
 
-    .btn {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: deeppink;
-        border-color: deeppink;
-        justify-items: center;
-        grid-area: botao;
-        text-align: center;
+#login,
+#senha {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
 
-    }
+.btn {
+  background-color: #040321;
+  color: #fff;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
