@@ -16,29 +16,31 @@ document.getElementById('botaoBuscar').addEventListener('click', function () {
                     const itemFilmes = document.createElement('div');
                     itemFilmes.innerHTML = `
                         <img src="${filme.Poster}" alt="${filme.Title}">
-                        <p>${filme.Title}</p>;
-                        <button class="movieDetailButton" data-id="${filme.imdbID}">Detalhes</button>
+                        <p>${filme.Title}</p>
+                        <button class="botaoDetalhes" data-id="${filme.imdbID}">Informações</button>
                     `;
                     listaFilmes.appendChild(itemFilmes);
                 });
-                document.querySelectorAll('.movieDetailButton').forEach(button => {
+                document.querySelectorAll('.botaoDetalhes').forEach(button => {
                     button.addEventListener('click', function () {
                         const imdbID = this.getAttribute('data-id');
 
-                        fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=108644`)
-                            .then(response => response.json())
-                            .then(movie => {
-                                const detalheFilmes = document.getElementById('detalheFilmes');
-                                detalheFilmes.innerHTML = `
-                                    <img src="${movie.Poster}" alt="${movie.Title}">
-                                    <h2>${movie.Title}</h2>
-                                    <p>Nota: ${movie.imdbRating}</p>
-                                    <p>Sinopse: ${movie.Plot}</p>
-                                    <p>Gênero: ${movie.Genre}</p>
-                                    <p>Classificação: ${movie.Rated}`;
-                            })
+                        document.querySelectorAll('.botaoDetalhes').forEach(button => {
+                            button.addEventListener('click', function () {
+                                const imdbID = this.getAttribute('data-id');
+                                window.location.href = `detalhes.html?id=${imdbID}`;
+                            });
+                        });
+
+
                     });
                 });
+
+            } else {
+                listaFilmes.innerHTML = 'Nenhum filme encontrado.';
             }
+        })
+        .catch(error => {
+            console.error('Erro na requisição:', error);
         });
 });

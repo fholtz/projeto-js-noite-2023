@@ -7,7 +7,7 @@ document.getElementById('botaoLogin').addEventListener('click', function () {
         .then(data => {
             const user = data.find(user => user.login === login && user.senha === senha);
             if (user) {
-                window.open('streaming.html?nome=' + user.nome);
+                window.open('filmes.html?nome=' + user.nome);
             } else {
                 document.getElementById('mensagemBemVindo').innerText = 'Login ou senha incorretos.';
             }
