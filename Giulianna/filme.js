@@ -15,7 +15,7 @@ function classificacao(objeto) {
             result = "Classificação 14 anos"
             break;
         case "R":
-            result = "Classificação 16 ano"
+            result = "Classificação 16 anos"
             break;
         case "NC-17":
             result = "Classificação 18 anos"
