@@ -24,15 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
 function getClassificacao(rated) {
     switch (rated) {
         case 'G':
-            return 'Classificação Livre';
+            return 'Livre';
         case 'PG':
             return 'Orientação dos Responsáveis';
         case 'PG-13':
-            return 'Classificação 14 anos';
+            return '14 anos';
         case 'R':
-            return 'Classificação 16 anos';
+            return '16 anos';
         case 'NC-17':
-            return 'Classificação 18 anos';
+            return '18 anos';
         default:
             return rated;
     }
@@ -40,15 +40,15 @@ function getClassificacao(rated) {
 
 function getCorClassificacao(classificacao) {
     switch (classificacao) {
-        case 'Classificação Livre':
+        case 'Livre':
             return 'green';
         case 'Orientação dos Responsáveis':
             return 'blue';
-        case 'Classificação 14 anos':
+        case '14 anos':
             return 'orange';
-        case 'Classificação 16 anos':
+        case '16 anos':
             return 'purple';
-        case 'Classificação 18 anos':
+        case '18 anos':
             return 'orange';
         default:
             return 'white';
