@@ -1,0 +1,49 @@
+@media only screen and (min-width: 768px) {
+    body {
+
+        padding: 0;
+
+        margin: 0;
+
+        background-color: #454d6b;
+
+        color: white;
+
+    }
+
+    #capa {
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    #dadosfilme {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+
+        padding: 0;
+
+        margin: 0;
+
+        background-color: #454d6b;
+
+        color: white;
+
+    }
+
+    #capa {
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    #dadosfilme {
+        text-align: center;
+    }
+
+
+
+}
