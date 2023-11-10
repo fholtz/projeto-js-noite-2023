@@ -1,0 +1,47 @@
+body {
+  font-family: cursive;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 20px;
+}
+
+#fundo {
+  background-image: url('giuflix.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#acessar {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 400px;
+}
+
+#login,
+#senha {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.btn {
+ background-color: #fff;
+    color: #040321;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    margin: 10px;
+}
