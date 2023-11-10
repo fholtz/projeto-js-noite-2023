@@ -17,7 +17,7 @@ document.getElementById('botaoBuscar').addEventListener('click', function () {
                     itemFilmes.innerHTML = `
                         <img src="${filme.Poster}" alt="${filme.Title}">
                         <p>${filme.Title}</p>
-                        <button class="botaoDetalhes" data-id="${filme.imdbID}">Informações</button>
+                        <button class="botaoDetalhes" data-id="${filme.imdbID}">Mais detalhes</button>
                     `;
                     listaFilmes.appendChild(itemFilmes);
                 });

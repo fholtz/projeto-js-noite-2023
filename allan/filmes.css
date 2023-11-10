@@ -7,8 +7,9 @@ body {
 }
 
 .titulo {
+    font-size: 2.5rem;
     text-align: center;
-    color: red;
+    color: rgb(172, 31, 31);
 }
 
 .conteudo {
@@ -30,6 +31,35 @@ body {
     font-size: 16px;
 }
 
+.botaoDetalhes {
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    background-color: #338636;
+    color: #a19d9d;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 50px;    
+}
+
+.botaoDetalhes {
+background-color: #2896df;
+color: #fff;
+border: none;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
+}
+
+.botaoDetalhes:hover {
+    background-color: #2980b9;
+}
+
 #botaoBuscar {
     padding: 10px;
     border: none;
@@ -41,12 +71,13 @@ body {
 }
 
 #botaoBuscar:hover {
-    transition: ease-in-out 1s;
-    background-color: #3ebe42;
+    transition: ease-in-out .5s;
+    background-color: #3f503f;
 }
 
 .container {
     display: flex;
+    grid-template-columns: (3fr 1fr);
 }
 
 #listaFilmes {
@@ -56,4 +87,16 @@ body {
 #mensagemBemVindo {
     font-size: 5rem;
     color: #333;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+    border-radius: 8px;
+}
+
+img:hover {
+    transition: .3s ease;;
+    transform: scale(1.02);
 }
